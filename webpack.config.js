@@ -30,14 +30,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|gif|ico)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            esModule: false,
-            name: '[name].[ext]',
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
           },
-        }],
+        ],
       },
     ],
   },
@@ -51,4 +52,5 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
   ],
+  entry: './src/index.js',
 };
