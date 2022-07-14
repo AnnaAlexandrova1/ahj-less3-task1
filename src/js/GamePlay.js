@@ -39,7 +39,7 @@ export default class GamePlay {
     this.lost = document.querySelector('.lost');
     this.boardListeners.forEach((callback) => callback(event.target));
 
-    if (event.target.classList.contains('giblin')) {
+    if (event.target.classList.contains('goblin')) {
       this.dead.textContent = 1 + this.dead.textContent;
       event.target.classList.remove('goblin');
     } else {

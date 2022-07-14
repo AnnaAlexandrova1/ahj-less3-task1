@@ -14,7 +14,6 @@ export default class Board {
     }
 
     this.board = board;
-    console.log(this.board);
   }
 
   getBoard(number) {
